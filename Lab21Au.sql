@@ -9,5 +9,6 @@ FROM Products AS p JOIN Categories as C
 ON p.CategoryID = C.CategoryID
 WHERE CategoryName = 'seafood'
 
+SeL
 
 
