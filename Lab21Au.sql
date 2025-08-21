@@ -28,7 +28,15 @@ group by s.CompanyName
 order by 2 DESC
 
 -- ต้องการรหัสสินค้า ชื่อสินค้า และจำนวนทั้งหมดที่ขายได้ 
- 
+SELECT p.ProductID, p.ProductName, sum(Quantity) จำนวนที่ขายได้
+from products p join [Order Details] od on p.ProductID = od.ProductID
+group by p.PROductID , p.ProductName
+
+-- ต้องการรหัสสินค้า ชื่อสินค้า ที่ nancy ขายได้ ทั้งหมด เรียงลำดับรหัสสินค้า
+SELECT p.ProductID, p.productName
+from Employees e join Orders o on e.EmployeeID = o.EmployeeID
+                 join [Order Details] od  on o.OrderID = od.OrderID
+                 join Products p on p.ProductID = od.ProductID
 
 
 
