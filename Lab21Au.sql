@@ -37,6 +37,19 @@ SELECT p.ProductID, p.productName
 from Employees e join Orders o on e.EmployeeID = o.EmployeeID
                  join [Order Details] od  on o.OrderID = od.OrderID
                  join Products p on p.ProductID = od.ProductID
+where e.FirstName = 'Nancy'
+order by ProductID
+
+--- ต้องการชื่อบริษัทลูกค้าซื้อ Around the Horn ซื้อสินค้าที่มาจากประเทศอะไรบ้าง
+SELECT s.Country
+from customers c join orders o on c.CustomerID = o.CustomerID
+                join [Order Details ] od on o.OrderID = od.OrderID
+                join Products p on p.ProductID = od.ProductID
+                join Suppliers s on s.SupplierID = p.SupplierID
+WHERE c.CompanyName = 'Around the Horn'
+
+--- บริษัทลูกค้าซื้อ Around the Horn ซื้อสินค้าที่มาจากประเทศอะไรบ้าง
+
 
 
 
