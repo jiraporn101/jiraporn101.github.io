@@ -9,6 +9,29 @@ FROM Products AS p JOIN Categories as C
 ON p.CategoryID = C.CategoryID
 WHERE CategoryName = 'seafood'
 
-SeL
+SELECT * From Orders Where OrderID = 10250
+SELECT *
+  
+-- ต้องการรหัสสินค้า ชื่อพนักงาน บริษัทผู้จำหน่าย ประเทศ
+SELECT  p.ProductID, p.ProductName,s.CompanyName, s.Country
+from Products p JOIN Suppliers s on p.SupplierID = s.SupplierID
+where Country in ('usa', 'uk')
+
+SELECT e.EmployeeID, FirstName, OrderID =10250
+from Employees e join orders o on e.EmployeeID = o. EmployeeID
+order by EmployeeID
+
+-- ต้องการชื่อบริษัทขนส่ง และจำนวนทั้งหมดที่ขายได้
+SELECT s.CompanyName, count(*) จำนวนorders
+FROM Shippers s join orders o on s.ShipperID = o.ShipVia
+group by s.CompanyName
+order by 2 DESC
+
+-- ต้องการรหัสสินค้า ชื่อสินค้า และจำนวนทั้งหมดที่ขายได้ 
+ 
+
+
+
+
 
 
