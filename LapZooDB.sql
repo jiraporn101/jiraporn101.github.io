@@ -1,4 +1,4 @@
-CREATE DATABASE Zoo
+CREATE DATABASE ZooDB ;
 
 CREATE TABLE AnimalType (
     animal_type_id INT PRIMARY KEY,
