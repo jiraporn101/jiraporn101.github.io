@@ -4,106 +4,177 @@
   <meta charset="UTF-8">
   <title>Jiraporn Laemee | Portfolio</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap');
+
     body {
       font-family: "Prompt", sans-serif;
-      background-color: #f8fbff;
-      color: #333;
-      line-height: 1.8;
+      background-color: #fff5f7; /* พาสเทลชมพูอ่อน */
       margin: 0;
       padding: 0;
+      color: #4b4b4b;
     }
+
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 50px 20px;
     }
-    h1, h2 {
-      color: #1a73e8;
-    }
+
     h1 {
       text-align: center;
+      font-size: 36px;
+      color: #ff7f50;
+      margin-bottom: 50px;
     }
-    img {
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      color: #ff69b4;
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .profile-img {
       display: block;
-      margin: 10px auto;
+      margin: 0 auto 20px auto;
       border-radius: 50%;
-      width: 150px;
-      height: 150px;
+      width: 180px;
+      height: 180px;
       object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      border: 4px solid #ffb6c1;
     }
+
     ul {
       list-style-type: "💡 ";
       padding-left: 20px;
     }
+
     a {
-      color: #1a73e8;
+      color: #ff7f50;
       text-decoration: none;
+      font-weight: 500;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    .section {
-      margin-bottom: 30px;
+
+    .section-content p, .section-content li {
+      font-size: 16px;
+      line-height: 1.7;
     }
+
+    .section-content strong {
+      color: #ff69b4;
+    }
+
+    /* สีพาสเทลสลับสำหรับการ์ด */
+    .card:nth-child(even) {
+      background-color: #fff0f5; /* พาสเทลม่วงอ่อน */
+    }
+
+    .card:nth-child(odd) {
+      background-color: #f0fff0; /* พาสเทลเขียวอ่อน */
+    }
+
+
   </style>
 </head>
 <body>
   <div class="container">
     <h1>หน้าแรก GitHub.io ของนักศึกษา</h1>
 
-    <div class="section">
+    <div class="card">
       <h2>1. แนะนำตัว (Introduction / Profile)</h2>
-      <img src="profile.jpg" alt="Profile Photo">
-      <p><strong>ชื่อ:</strong> จิราพร แหล้มี (Jiraporn Laemee)</p>
-      <p><strong>คณะ:</strong> วิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏอุดรธานี</p>
-      <p><strong>ชั้นปี:</strong> นักศึกษาปี 2</p>
-      <p><strong>ความสนใจ:</strong> AI, Web Development</p>
+      <img src="Jira.jpg" alt="My Picture" class="profile-img">
+      <div class="section-content">
+        <p><strong>ชื่อ:</strong> จิราพร แหล้มี (Jiraporn Laemee)</p>
+        <p><strong>คณะ:</strong> วิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏอุดรธานี</p>
+         <p><strong>สาขา:</strong> สาขาเทคโนโลยีสารสนเทศ </p>
+        <p><strong>มหาวิทยาลัย:</strong> มหาวิทยาลัยราชภัฏอุดรธานี</p>
+        <p><strong>ชั้นปี:</strong> นักศึกษาปี 2</p>
+        <p><strong>ความสนใจ:</strong> AI, Web Development , Cybersecurity , Mobile App Development</p>
+      </div>
     </div>
 
-    <div class="section">
+    <div class="card">
       <h2>2. ทักษะ (Skills)</h2>
-      <ul>
-        <li><strong>Tools:</strong> Git, VS Code, Figma, Google Colab</li>
-      </ul>
+      <div class="section-content">
+        <ul>
+          <li><strong>Tools:</strong> Git, VS Code, Figma, Google Colab</li>
+          <li><strong>Tools:</strong>Programming : Python , java , HTML/CSS , JavaScipt   </li>
+          <li><strong>Tools:</strong> Soft skills : การสื่อสาร, การทำงานเป็นทีม</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="section">
+    <div class="card">
       <h2>3. ผลงานที่ผ่านมา (Projects / Portfolio)</h2>
-      <ul>
-        <li>สร้างเว็บไซต์ส่วนตัว</li>
-        <li><a href="https://jiraporn101.github.io/" target="_blank">🔗 ลิงก์เว็บไซต์</a></li>
-      </ul>
+      <div class="section-content">
+        <ul>
+          <li>สร้างเว็บไซต์ดนตรีพื้นเมืองภาคใต้</li>
+          <li><a href="file:///D:/mywebspace/hompage.html" target="_blank">🔗 ลิงก์เว็บไซต์</a></li>
+        </ul>
     </div>
 
-    <div class="section">
+    <div class="card">
       <h2>4. การศึกษา (Education)</h2>
-      <ul>
-        <li>มัธยมศึกษาตอนต้น: โรงเรียนกู่แก้ววิทยา</li>
-        <li>มัธยมศึกษาตอนปลาย: Fi'giuposov'sko;bmpk</li>
-        <li>ระดับปริญญาตรี: คณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏอุดรธานี</li>
-      </ul>
+      <div class="section-content">
+        <ul>
+          <li>มัธยมศึกษาอนุบาล-ประถมศึกษา: โรงเรียนอนุบาลกู่แก้ว</li>
+          <li>มัธยมศึกษาตอนต้น: โรงเรียนกู่แก้ววิทยา</li>
+          <li>มัธยมศึกษาตอนปลาย: โรงเรียนหนองหานวิทยา</li>
+          <li>ระดับปริญญาตรี: คณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏอุดรธานี</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="section">
-      <h2>5. กิจกรรมและผลงานอื่นๆ (Activities / Achievements)</h2>
-      <ul>
-        <li>อบรม “การประยุกต์ใช้งาน Dashboard เพื่อความปลอดภัยไซเบอร์”</li>
-        <li>📄 <em>แนบรูปเกียรติบัตร</em></li>
-      </ul>
+<div class="card">
+  <h2>5. กิจกรรมและผลงานอื่นๆ (Activities / Achievements)</h2>
+  <div class="section-content">
+    <ul>
+      <li>อบรม “การประยุกต์ใช้งาน Dashboard เพื่อความปลอดภัยไซเบอร์”</li>
+    </ul>
+    <div class="images-row">
+    <img src="yo.jpg" alt="My Picture" class="profile-img">
+      <img src="pp.jpg" alt="My Picture" class="profile-img">
     </div>
+  </div>
+</div>
 
-    <div class="section">
+
+    <div class="card">
       <h2>6. ติดต่อ (Contact)</h2>
-      <p>Email: <a href="mailto:67040233101@udru.ac.th">67040233101@udru.ac.th</a></p>
-      <p>GitHub: <a href="https://github.com/jiraporn101" target="_blank">github.com/jiraporn101</a></p>
-      <p>Facebook: จิราพร แหล้มี</p>
-      <p>จังหวัดอุดรธานี</p>
+      <div class="section-content">
+        <p>Email: <a href="mailto:67040233101@udru.ac.th">67040233101@udru.ac.th</a></p>
+        <p>GitHub: <a href="https://github.com/jiraporn101" target="_blank">github.com/jiraporn101</a></p>
+        <p>Facebook: จิราพร แหล้มี</p>
+        <p>Line : </p>
+        <img src="Line.jpg" alt="My Picture" style="width:150px; height:150px; border-radius:0; object-fit:cover;">
+        <p>จังหวัดอุดรธานี</p>
+      </div>
     </div>
 
-    <div class="section">
+    <div class="card">
       <h2>7. องค์ประกอบเสริม</h2>
-      <p><strong>เป้าหมายในอนาคต:</strong> การพัฒนาเว็บไซต์ (Web Development)</p>
+      <div class="section-content">
+        <p><strong>เป้าหมายในอนาคต:</strong> การพัฒนาเว็บไซต์ (Web Development)</p>
+      </div>
     </div>
+    
   </div>
 </body>
 </html>
