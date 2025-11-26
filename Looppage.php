@@ -1,116 +1,142 @@
 <?php
-// -----------------------------
-//  ตัวแปรข้อมูลส่วนตัว
-// -----------------------------
+// ==============================
+// ข้อมูลส่วนตัว
+// ==============================
 $university = "มหาวิทยาลัยราชภัฏอุดรธานี";
 $faculty = "คณะวิทยาศาสตร์";
 $major = "สาขาเทคโนโลยีสารสนเทศ";
 $name = "จิราพร แหล้มี (Jiraporn Laemee)";
-$intro = "นักศึกษาปี 2 ชอบงานด้าน AI และ Web Development";
+$studentId = "67040233101";
+$intro = "นักศึกษาปีที่ 2 สนใจ AI, Web Development และระบบอัจฉริยะ";
+$picture = "pic/jiji.jpg";   // <-- ใส่รูป JPG จริง
 ?>
 <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>PHP Loop Example</title>
-
+<title>PHP Loop Showcase</title>
 <style>
     body {
         font-family: "Prompt", sans-serif;
-        background: #f5f8ff;
-        padding: 20px;
+        background: linear-gradient(to bottom, #c9e6ff, #f8fcff);
+        padding: 30px;
     }
-    .container {
-        width: 80%;
+    .page-box {
+        width: 85%;
         margin: auto;
-        background: white;
-        padding: 20px;
+        background: #ffffff;
         border-radius: 20px;
-        box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+        padding: 25px;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
     }
-    h2 {
-        color: #3a4ca3;
-        margin-top: 40px;
+    h1 {
+        text-align: center;
+        color: #2a4b8d;
     }
-    pre {
-        background: #eef2ff;
+    .student-img {
+        display: block;
+        margin: 0 auto 20px auto;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        border: 3px solid #4a6cf7;
+        object-fit: cover;
+    }
+    .info {
+        background: #e8f0ff;
+        border-left: 8px solid #4a6cf7;
         padding: 15px;
-        border-radius: 10px;
+        margin-bottom: 30px;
+        border-radius: 12px;
         font-size: 18px;
     }
-    .info-box {
-        background: #d9e6ff;
+    .section-title {
+        color: #4450a3;
+        margin-top: 35px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .result-box {
+        background: #f3f6ff;
         padding: 15px;
-        border-radius: 10px;
-        font-size: 18px;
-        line-height: 1.6;
+        border-radius: 12px;
+        font-size: 20px;
+        white-space: pre-line;
+        border: 1px dashed #8a9cff;
+        color: #2a2d51;
     }
 </style>
 </head>
+
 <body>
+<div class="page-box">
 
-<div class="container">
-    <h1>ตัวอย่าง Web Page ด้วย PHP</h1>
+    <h1>ข้อมูลส่วนตัว</h1>
 
-    <!-- แสดงข้อมูลส่วนตัว -->
-    <div class="info-box">
+    <!-- รูปนักศึกษา -->
+    <img src="<?= $picture ?>" alt="รูปนักศึกษา" class="student-img">
+
+    <!-- ข้อมูลส่วนตัว -->
+    <div class="info">
+        <strong>รหัสนักศึกษา:</strong> <?= $studentId ?><br>
+        <strong>ชื่อ - นามสกุล:</strong> <?= $name ?><br>
         <strong>มหาวิทยาลัย:</strong> <?= $university ?><br>
         <strong>คณะ:</strong> <?= $faculty ?><br>
         <strong>สาขา:</strong> <?= $major ?><br>
-        <strong>ชื่อนักศึกษา:</strong> <?= $name ?><br>
-        <strong>แนะนำตัว:</strong> <?= $intro ?>
+        <strong>ข้อมูลแนะนำตัว:</strong> <?= $intro ?>
     </div>
 
-    <!-- ---------------------- -->
-    <!-- 1) ใช้ Loop for -->
-    <!-- ---------------------- -->
-    <h2>ใช้ Loop: for</h2>
-    <pre>
+    <!-- ==========================
+        1) Loop for
+    =========================== -->
+    <div class="section-title">🔵 ตัวอย่างที่ 1 — ใช้ Loop: for (รูปสามเหลี่ยมดาวเพิ่มขึ้น)</div>
+    <div class="result-box">
 <?php
-for($i = 1; $i <= 4; $i++){
+for ($i = 1; $i <= 4; $i++) {
     echo str_repeat("*", $i) . "\n";
 }
 ?>
-    </pre>
+    </div>
 
-    <!-- ---------------------- -->
-    <!-- 2) ใช้ Loop while -->
-    <!-- ---------------------- -->
-    <h2>ใช้ Loop: while</h2>
-    <pre>
+    <!-- ==========================
+        2) Loop while
+    =========================== -->
+    <div class="section-title">🟣 ตัวอย่างที่ 2 — ใช้ Loop: while (แสดงตัวเลขแนวนอน)</div>
+    <div class="result-box">
 <?php
-$n = 1;
-while($n <= 3){
-    echo str_repeat("$n ", 4) . "\n";
-    $n++;
+$a = 1;
+while ($a <= 3) {
+    echo str_repeat("$a ", 4) . "\n";
+    $a++;
 }
 ?>
-    </pre>
+    </div>
 
-    <!-- ---------------------- -->
-    <!-- 3) ใช้ Loop do..while -->
-    <!-- ---------------------- -->
-    <h2>ใช้ Loop: do...while</h2>
-    <pre>
+    <!-- ==========================
+        3) Loop do...while
+    =========================== -->
+    <div class="section-title">🟠 ตัวอย่างที่ 3 — ใช้ Loop: do...while (ตัวเลขเป็นขั้นบันได)</div>
+    <div class="result-box">
 <?php
-$x = 1;
+$b = 1;
 do {
-    echo str_repeat("$x ", $x) . "\n";
-    $x++;
-} while($x <= 3);
+    echo str_repeat("$b ", $b) . "\n";
+    $b++;
+} while ($b <= 3);
 ?>
-    </pre>
+    </div>
 
-    <!-- ---------------------- -->
-    <!-- 4) กรอบตัวเลข + ดาว -->
-    <!-- ---------------------- -->
-    <h2>ใช้ Loop: for (สร้างกรอบ)</h2>
-    <pre>
+    <!-- ==========================
+        4) กรอบดาว + ตัวเลข
+    =========================== -->
+    <div class="section-title">🟢 ตัวอย่างที่ 4 — ใช้ Loop: for (กรอบดาวล้อมตัวเลข)</div>
+    <div class="result-box">
 <?php
-for ($r = 1; $r <= 5; $r++) {
-    for ($c = 1; $c <= 6; $c++) {
-
-        if ($r == 1 || $r == 5 || $c == 1 || $c == 6) {
+$rows = 5;
+$cols = 6;
+for ($r = 1; $r <= $rows; $r++) {
+    for ($c = 1; $c <= $cols; $c++) {
+        if ($r == 1 || $r == $rows || $c == 1 || $c == $cols) {
             echo "* ";
         } else {
             echo ($r - 1) . " ";
@@ -119,21 +145,20 @@ for ($r = 1; $r <= 5; $r++) {
     echo "\n";
 }
 ?>
-    </pre>
+    </div>
 
-    <!-- ---------------------- -->
-    <!-- 5) ตัวเลขกลับด้าน -->
-    <!-- ---------------------- -->
-    <h2>ใช้ Loop: for (กลับด้าน)</h2>
-    <pre>
+    <!-- ==========================
+        5) ตัวเลขกลับด้าน
+    =========================== -->
+    <div class="section-title">🔴 ตัวอย่างที่ 5 — ใช้ Loop: for (ตัวเลขแบบกลับหัว)</div>
+    <div class="result-box">
 <?php
-for($i = 3; $i >= 1; $i--){
+for ($i = 3; $i >= 1; $i--) {
     echo str_repeat("$i ", $i) . "\n";
 }
 ?>
-    </pre>
+    </div>
 
 </div>
-
 </body>
 </html>
